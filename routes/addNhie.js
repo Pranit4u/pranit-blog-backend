@@ -3,8 +3,8 @@ let NHIE = require('../models/nhie.model');
 
 
 router.route('/add').post((req,res) => {
-    const questions = req.body.questions;
-
+    const questions = req.body;
+    console.log(questions);
     NHIE.insertMany(questions)
         .then(() => {res.send({message:"1"});
         })
