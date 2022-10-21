@@ -12,8 +12,8 @@ router.route('/add').post((req,res) => {
     });
 
 router.route('/get').get((req,res) => {
-    const genre = req.query.genre
-    NHIE.find({genre: genre})
+    const query = req.query
+    NHIE.find(query)
         .then(questions => res.json(questions))
         .catch(err => res.status(400).json('Error: '+ err));
 });

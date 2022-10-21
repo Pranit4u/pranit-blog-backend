@@ -22,12 +22,14 @@ connection.once('open', () => {
 // const usersRouter = require('./routes/users');
 const sendMessageRouter = require('./routes/sendMessage');
 const getPictureRouter = require('./routes/addPicture');
+const nhieRouter = require('./routes/addNhie');
 // const updatePatientRouter = require('./routes/updatePatient');
 
 // app.use('/exercises',exercisesRouter);
 // app.use('/users',usersRouter);
 app.use('/sendMessage',sendMessageRouter);
 app.use('/addPicture',getPictureRouter);
+app.use('/nhie',nhieRouter);
 // app.use('/updatePatient',updatePatientRouter);
 
 app.listen(port, () => {
